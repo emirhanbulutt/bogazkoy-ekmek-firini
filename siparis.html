@@ -6,175 +6,443 @@
     <meta name="description" content="Boğazköy Ekmek Fırını için sipariş talebinizi oluşturun.">
     <meta name="theme-color" content="#fffaf1">
     <title>Sipariş Ver | Boğazköy Ekmek Fırını</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <a class="skip-link" href="#main-content">İçeriğe geç</a>
 
-    <div class="site-shell">
-        <header class="page-hero">
-            <a class="back-link" href="index.html">← Ana sayfaya dön</a>
-            <p class="hero-label">Tazeliği sofranıza taşıyalım</p>
-            <h1>Sipariş Oluştur</h1>
-            <p class="hero-intro">İstediğiniz ürünleri ve adetleri seçin. Sipariş talebiniz WhatsApp üzerinden bize iletilsin.</p>
-        </header>
+<a class="skip-link" href="#main-content">İçeriğe geç</a>
 
-        <main id="main-content" class="order-layout">
-            <section class="card order-form-card">
-                <p class="section-kicker">Sipariş detayları</p>
-                <h2>Ne almak istersiniz?</h2>
+<div class="site-shell">
 
-                <form id="orderForm" class="order-form">
-                    <fieldset class="product-fieldset">
-                        <legend>Ürün seçimi</legend>
-                        <p class="form-help">İstediğiniz ürünlerin adetini girin. Almayacağınız ürünleri 0 bırakabilirsiniz.</p>
+    <header class="page-hero">
 
-                        <div class="product-list">
-                            <label class="product-row" for="somun">
-                                <span><strong>Somun Ekmek</strong><small>Klasik günlük ekmek</small></span>
-                                <span class="quantity-control"><span class="sr-only">Somun ekmek adedi</span><input id="somun" name="Somun Ekmek" type="number" min="0" max="99" value="0" inputmode="numeric"></span>
-                            </label>
-                            <label class="product-row" for="cavdar">
-                                <span><strong>Çavdar Ekmeği</strong><small>Çavdar ekmeği</small></span>
-                                <span class="quantity-control"><span class="sr-only">Çavdar ekmeği adedi</span><input id="cavdar" name="Çavdar Ekmeği" type="number" min="0" max="99" value="0" inputmode="numeric"></span>
-                            </label>
-                            <label class="product-row" for="kepek">
-                                <span><strong>Kepek Ekmeği</strong><small>Kepekli ekmek</small></span>
-                                <span class="quantity-control"><span class="sr-only">Kepek ekmeği adedi</span><input id="kepek" name="Kepek Ekmeği" type="number" min="0" max="99" value="0" inputmode="numeric"></span>
-                            </label>
-                            <label class="product-row" for="pogaca">
-                                <span><strong>Poğaça</strong><small>Günlük fırın ürünü</small></span>
-                                <span class="quantity-control"><span class="sr-only">Poğaça adedi</span><input id="pogaca" name="Poğaça" type="number" min="0" max="99" value="0" inputmode="numeric"></span>
-                            </label>
-                            <label class="product-row" for="acma">
-                                <span><strong>Açma</strong><small>Günlük fırın ürünü</small></span>
-                                <span class="quantity-control"><span class="sr-only">Açma adedi</span><input id="acma" name="Açma" type="number" min="0" max="99" value="0" inputmode="numeric"></span>
-                            </label>
-                        </div>
-                    </fieldset>
+        <a class="back-link" href="index.html">← Ana sayfaya dön</a>
 
-                    <fieldset class="customer-fieldset">
-                        <legend>İletişim bilgileriniz</legend>
-                        <div class="form-grid">
-                            <label class="field" for="customerName">
-                                <span>Adınız ve soyadınız</span>
-                                <input id="customerName" name="customerName" type="text" autocomplete="name" placeholder="Ad Soyad" required maxlength="80">
-                            </label>
-                            <label class="field" for="customerPhone">
-                                <span>Telefon numaranız</span>
-                                <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" placeholder="05XX XXX XX XX" required maxlength="20">
-                            </label>
-                            <label class="field" for="pickupDate">
-                                <span>Hazır olmasını istediğiniz tarih</span>
-                                <input id="pickupDate" name="pickupDate" type="date" required>
-                            </label>
-                            <label class="field" for="pickupTime">
-                                <span>Tercih ettiğiniz saat</span>
-                                <input id="pickupTime" name="pickupTime" type="time" required>
-                            </label>
-                        </div>
-                        <label class="field note-field" for="orderNote">
-                            <span>Eklemek istediğiniz not <small>(isteğe bağlı)</small></span>
-                            <textarea id="orderNote" name="orderNote" rows="4" maxlength="500" placeholder="Varsa ürün, hazırlık veya sipariş notunuzu yazın."></textarea>
+        <p class="hero-label">Tazeliği sofranıza taşıyalım</p>
+
+        <h1>Sipariş Oluştur</h1>
+
+        <p class="hero-intro">
+            İstediğiniz ürünleri ve adetleri seçin.
+            Sipariş talebiniz WhatsApp üzerinden bize iletilsin.
+        </p>
+
+    </header>
+
+
+    <main id="main-content" class="order-layout">
+
+        <section class="card order-form-card">
+
+            <p class="section-kicker">Sipariş detayları</p>
+
+            <h2>Ne almak istersiniz?</h2>
+
+
+            <form id="orderForm" class="order-form">
+
+                <fieldset class="product-fieldset">
+
+                    <legend>Ürün seçimi</legend>
+
+                    <p class="form-help">
+                        İstediğiniz ürünlerin adetini girin.
+                        Almayacağınız ürünleri 0 bırakabilirsiniz.
+                    </p>
+
+
+                    <div class="product-list">
+
+                        <label class="product-row" for="somun">
+                            <span>
+                                <strong>Somun Ekmek</strong>
+                                <small>Günlük taze ekmek</small>
+                            </span>
+
+                            <span class="quantity-control">
+                                <span class="sr-only">Somun ekmek adedi</span>
+                                <input id="somun" name="Somun Ekmek" type="number" min="0" max="99" value="0" inputmode="numeric">
+                            </span>
                         </label>
-                    </fieldset>
 
-                    <button class="submit-order-button" type="submit">WhatsApp ile Sipariş İsteği Gönder <span aria-hidden="true">→</span></button>
-                    <p class="form-disclaimer">Bu sayfa çevrimiçi ödeme almaz. Bilgileriniz WhatsApp mesajına dönüştürülür. Siparişiniz, fırın tarafından uygunluk ve saat teyidi verildiğinde kesinleşir.</p>
-                </form>
+
+                        <label class="product-row" for="cavdar">
+                            <span>
+                                <strong>Çavdar Ekmeği</strong>
+                                <small>Çavdar ekmeği</small>
+                            </span>
+
+                            <span class="quantity-control">
+                                <span class="sr-only">Çavdar ekmeği adedi</span>
+                                <input id="cavdar" name="Çavdar Ekmeği" type="number" min="0" max="99" value="0" inputmode="numeric">
+                            </span>
+                        </label>
+
+
+                        <label class="product-row" for="tam-bugday">
+                            <span>
+                                <strong>Tam Buğday Ekmeği</strong>
+                                <small>Tam buğday ekmeği</small>
+                            </span>
+
+                            <span class="quantity-control">
+                                <span class="sr-only">Tam buğday ekmeği adedi</span>
+                                <input id="tam-bugday" name="Tam Buğday Ekmeği" type="number" min="0" max="99" value="0" inputmode="numeric">
+                            </span>
+                        </label>
+
+
+                        <label class="product-row" for="cicek">
+                            <span>
+                                <strong>Çiçek Ekmek</strong>
+                                <small>Paylaşmalık fırın lezzeti</small>
+                            </span>
+
+                            <span class="quantity-control">
+                                <span class="sr-only">Çiçek ekmek adedi</span>
+                                <input id="cicek" name="Çiçek Ekmek" type="number" min="0" max="99" value="0" inputmode="numeric">
+                            </span>
+                        </label>
+
+
+                        <label class="product-row" for="pogaca">
+                            <span>
+                                <strong>Poğaça</strong>
+                                <small>Günlük fırın ürünü</small>
+                            </span>
+
+                            <span class="quantity-control">
+                                <span class="sr-only">Poğaça adedi</span>
+                                <input id="pogaca" name="Poğaça" type="number" min="0" max="99" value="0" inputmode="numeric">
+                            </span>
+                        </label>
+
+
+                        <label class="product-row" for="acma">
+                            <span>
+                                <strong>Açma</strong>
+                                <small>Günlük fırın ürünü</small>
+                            </span>
+
+                            <span class="quantity-control">
+                                <span class="sr-only">Açma adedi</span>
+                                <input id="acma" name="Açma" type="number" min="0" max="99" value="0" inputmode="numeric">
+                            </span>
+                        </label>
+
+
+                        <label class="product-row" for="simit">
+                            <span>
+                                <strong>Simit</strong>
+                                <small>Günlük taze simit</small>
+                            </span>
+
+                            <span class="quantity-control">
+                                <span class="sr-only">Simit adedi</span>
+                                <input id="simit" name="Simit" type="number" min="0" max="99" value="0" inputmode="numeric">
+                            </span>
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset class="customer-fieldset">
+
+                    <legend>İletişim bilgileriniz</legend>
+
+                    <div class="form-grid">
+
+                        <label class="field" for="customerName">
+                            <span>Adınız ve soyadınız</span>
+                            <input id="customerName" name="customerName" type="text" autocomplete="name" placeholder="Ad Soyad" required maxlength="80">
+                        </label>
+
+
+                        <label class="field" for="customerPhone">
+                            <span>Telefon numaranız</span>
+                            <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" placeholder="05XX XXX XX XX" required maxlength="20">
+                        </label>
+
+
+                        <label class="field" for="pickupDate">
+                            <span>Hazır olmasını istediğiniz tarih</span>
+                            <input id="pickupDate" name="pickupDate" type="date" required>
+                        </label>
+
+
+                        <label class="field" for="pickupTime">
+                            <span>Tercih ettiğiniz saat</span>
+                            <input id="pickupTime" name="pickupTime" type="time" required>
+                        </label>
+
+                    </div>
+
+
+                    <label class="field note-field" for="orderNote">
+
+                        <span>
+                            Eklemek istediğiniz not
+                            <small>(isteğe bağlı)</small>
+                        </span>
+
+                        <textarea id="orderNote" name="orderNote" rows="4" maxlength="500" placeholder="Varsa ürün, hazırlık veya sipariş notunuzu yazın."></textarea>
+
+                    </label>
+
+                </fieldset>
+
+
+                <button class="submit-order-button" type="submit">
+                    WhatsApp ile Sipariş İsteği Gönder
+                    <span aria-hidden="true">→</span>
+                </button>
+
+
+                <p class="form-disclaimer">
+                    Bu sayfa çevrimiçi ödeme almaz.
+                    Bilgileriniz WhatsApp mesajına dönüştürülür.
+                    Siparişiniz, fırın tarafından uygunluk ve saat teyidi verildiğinde kesinleşir.
+                </p>
+
+            </form>
+
+        </section>
+
+
+
+        <aside class="order-sidebar">
+
+            <section class="card sidebar-card">
+
+                <p class="section-kicker">Nasıl çalışır?</p>
+
+                <h2>3 adımda sipariş</h2>
+
+                <ol class="steps-list">
+
+                    <li>
+                        <span>1</span>
+                        <div>
+                            <strong>Ürünleri seçin</strong>
+                            <p>İstediğiniz ürünlerin adetlerini belirtin.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>2</span>
+                        <div>
+                            <strong>Bilgilerinizi girin</strong>
+                            <p>Adınızı, telefonunuzu ve tercih ettiğiniz zamanı yazın.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <span>3</span>
+                        <div>
+                            <strong>WhatsApp'tan iletin</strong>
+                            <p>Açılan mesajı kontrol edip gönderin. Sipariş teyidini bekleyin.</p>
+                        </div>
+                    </li>
+
+                </ol>
+
             </section>
 
-            <aside class="order-sidebar">
-                <section class="card sidebar-card">
-                    <p class="section-kicker">Nasıl çalışır?</p>
-                    <h2>3 adımda sipariş</h2>
-                    <ol class="steps-list">
-                        <li><span>1</span><div><strong>Ürünleri seçin</strong><p>İstediğiniz ürünlerin adetlerini belirtin.</p></div></li>
-                        <li><span>2</span><div><strong>Bilgilerinizi girin</strong><p>Adınızı, telefonunuzu ve tercih ettiğiniz zamanı yazın.</p></div></li>
-                        <li><span>3</span><div><strong>WhatsApp'tan iletin</strong><p>Açılan mesajı kontrol edip gönderin. Sipariş teyidini bekleyin.</p></div></li>
-                    </ol>
-                </section>
 
-                <section class="card sidebar-card address-card">
-                    <p class="section-kicker">Fırınımız</p>
-                    <h2>Boğazköy Ekmek Fırını</h2>
-                    <p>Boğazköy İstiklal Mahallesi, İsmet İnönü Caddesi No: 141</p>
-                    <p class="sidebar-hours"><strong>Çalışma saatleri</strong><br>Pazartesi - Cuma: 07:00 - 19:00<br>Cumartesi: 08:00 - 18:00<br>Pazar: Kapalı</p>
-                    <a class="text-link" href="index.html#main-content">Ana sayfaya dön</a>
-                </section>
-            </aside>
-        </main>
+            <section class="card sidebar-card address-card">
 
-        <footer class="site-footer">
-            <p>&copy; 2026 Boğazköy Ekmek Fırını. Tüm hakları saklıdır.</p>
-        </footer>
-    </div>
+                <p class="section-kicker">Fırınımız</p>
 
-    <script>
-        // WhatsApp işletme numarasını uluslararası formatta, + işareti ve boşluk olmadan yazın.
-        // Örnek format: 905XXXXXXXXX (90 + 10 haneli telefon numarası)
-        const WHATSAPP_NUMBER = "905413845980";
+                <h2>Boğazköy Ekmek Fırını</h2>
 
-        const orderForm = document.getElementById("orderForm");
-        const dateInput = document.getElementById("pickupDate");
+                <p>
+                    Boğazköy İstiklal Mahallesi,
+                    İsmet İnönü Caddesi No: 141
+                </p>
 
-        // Geçmiş tarihlerin seçilmesini önle.
-        const today = new Date();
-        const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
-            .toISOString()
-            .split("T")[0];
-        dateInput.min = localToday;
+                <p class="sidebar-hours">
+                    <strong>Çalışma saatleri</strong><br>
+                    Pazartesi - Cuma: 07:00 - 19:00<br>
+                    Cumartesi: 08:00 - 18:00<br>
+                    Pazar: Kapalı
+                </p>
 
-        orderForm.addEventListener("submit", (event) => {
-            event.preventDefault();
+                <a class="text-link" href="index.html#main-content">
+                    Ana sayfaya dön
+                </a>
 
-            if (!orderForm.reportValidity()) return;
+            </section>
 
-            if (!/^90\d{10}$/.test(WHATSAPP_NUMBER)) {
-                alert("Sipariş almaya başlamadan önce siparis.html dosyasındaki WHATSAPP_NUMBER alanına işletmenin WhatsApp numarasını eklemelisin.");
-                return;
+        </aside>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Boğazköy Ekmek Fırını.
+            Tüm hakları saklıdır.
+        </p>
+
+    </footer>
+
+</div>
+
+
+
+<script>
+
+    // WhatsApp işletme numarasını uluslararası formatta yazın.
+    const WHATSAPP_NUMBER = "905XXXXXXXXX";
+
+
+    const orderForm = document.getElementById("orderForm");
+
+    const dateInput = document.getElementById("pickupDate");
+
+
+    // Geçmiş tarihlerin seçilmesini önle.
+
+    const today = new Date();
+
+    const localToday = new Date(
+        today.getTime() - today.getTimezoneOffset() * 60000
+    )
+    .toISOString()
+    .split("T")[0];
+
+    dateInput.min = localToday;
+
+
+    orderForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        if (!orderForm.reportValidity()) return;
+
+
+        if (!/^90\d{10}$/.test(WHATSAPP_NUMBER)) {
+
+            alert("Lütfen WhatsApp işletme numarasını tanımlayın.");
+
+            return;
+
+        }
+
+
+        const formData = new FormData(orderForm);
+
+        const selectedProducts = [];
+
+
+        const productNames = [
+            "Somun Ekmek",
+            "Çavdar Ekmeği",
+            "Tam Buğday Ekmeği",
+            "Çiçek Ekmek",
+            "Poğaça",
+            "Açma",
+            "Simit"
+        ];
+
+
+        productNames.forEach((productName) => {
+
+            const quantity = Number(formData.get(productName) || 0);
+
+            if (quantity > 0) {
+
+                selectedProducts.push(
+                    `- ${productName}: ${quantity} adet`
+                );
+
             }
 
-            const formData = new FormData(orderForm);
-            const selectedProducts = [];
-
-            ["Somun Ekmek", "Çavdar Ekmeği", "Kepek Ekmeği", "Poğaça", "Açma"].forEach((productName) => {
-                const quantity = Number(formData.get(productName) || 0);
-                if (quantity > 0) selectedProducts.push(`- ${productName}: ${quantity} adet`);
-            });
-
-            if (selectedProducts.length === 0) {
-                alert("Lütfen en az bir ürün için adet girin.");
-                return;
-            }
-
-            const dateParts = String(formData.get("pickupDate")).split("-");
-            const formattedDate = `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
-            const note = String(formData.get("orderNote") || "").trim();
-
-            const message = [
-                "Merhaba, Boğazköy Ekmek Fırını için sipariş talebim var.",
-                "",
-                `Ad Soyad: ${formData.get("customerName")}`,
-                `Telefon: ${formData.get("customerPhone")}`,
-                `Hazır olmasını istediğim tarih: ${formattedDate}`,
-                `Tercih ettiğim saat: ${formData.get("pickupTime")}`,
-                "",
-                "Ürünler:",
-                ...selectedProducts,
-                note ? "" : null,
-                note ? `Not: ${note}` : null
-            ].filter((line) => line !== null).join("\n");
-
-            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-            const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-
-            // Açılır pencere engellenirse aynı sekmede devam et.
-            if (!whatsappWindow) window.location.href = whatsappUrl;
         });
-    </script>
+
+
+        if (selectedProducts.length === 0) {
+
+            alert("Lütfen en az bir ürün için adet girin.");
+
+            return;
+
+        }
+
+
+        const dateParts = String(
+            formData.get("pickupDate")
+        ).split("-");
+
+
+        const formattedDate =
+            `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
+
+
+        const note = String(
+            formData.get("orderNote") || ""
+        ).trim();
+
+
+        const message = [
+
+            "Merhaba, Boğazköy Ekmek Fırını için sipariş talebim var.",
+
+            "",
+
+            `Ad Soyad: ${formData.get("customerName")}`,
+
+            `Telefon: ${formData.get("customerPhone")}`,
+
+            `Hazır olmasını istediğim tarih: ${formattedDate}`,
+
+            `Tercih ettiğim saat: ${formData.get("pickupTime")}`,
+
+            "",
+
+            "Ürünler:",
+
+            ...selectedProducts,
+
+            note ? "" : null,
+
+            note ? `Not: ${note}` : null
+
+        ]
+        .filter((line) => line !== null)
+        .join("\n");
+
+
+        const whatsappUrl =
+            `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+
+        const whatsappWindow = window.open(
+            whatsappUrl,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+
+        if (!whatsappWindow) {
+
+            window.location.href = whatsappUrl;
+
+        }
+
+    });
+
+</script>
+
 </body>
 </html>
